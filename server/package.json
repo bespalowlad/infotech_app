@@ -1,0 +1,20 @@
+{
+  "name": "infotech_app_server",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/bespalowlad/infotech_app",
+  "author": "Bespalov Vladyslav <bespalov.vladyslav@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "dependencies": {
+    "config": "^3.3.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
