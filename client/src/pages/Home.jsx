@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { TableOfCharacters, CurrentCharacter } from '../components'
 import { getCharacters } from '../api'
-import { useAppContext } from '../context'
+import { useAppContext } from '../hooks'
 import { fetchingData, successReceivedData, failureReceiveData } from '../actions'
 
 export default function Home () {

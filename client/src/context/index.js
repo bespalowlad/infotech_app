@@ -1,12 +1,15 @@
-import React, { useReducer, useContext } from 'react'
-import { FETCHING_DATA, SUCCESS_RECEIVED_DATA, FAILURE_RECEIVE_DATA } from '../constants'
+import React, { useReducer } from 'react'
+import { FETCHING_DATA, SUCCESS_RECEIVED_DATA, FAILURE_RECEIVE_DATA,
+    UPDATE_X_INDEX, UPDATE_Y_INDEX } from '../constants'
 
 const AppContext = React.createContext()
 
 const initialState = {
     isFetching: false,
     hasError: false,
-    data: []
+    data: [],
+    xIndex: undefined,
+    yIndex: undefined
 }
 
 function reducer (state, action) {
@@ -23,7 +26,9 @@ function reducer (state, action) {
             return {
                 ...state,
                 data: action.data,
-                isFetching: false
+                isFetching: false,
+                xIndex: 0,
+                yIndex: 0
             }
         }
 
@@ -32,6 +37,20 @@ function reducer (state, action) {
                 ...state,
                 isFetching: false,
                 hasError: true
+            }
+        }
+
+        case UPDATE_X_INDEX: {
+            return {
+                ...state,
+                xIndex: action.index
+            }
+        }
+
+        case UPDATE_Y_INDEX: {
+            return {
+                ...state,
+                yIndex: action.index
             }
         }
         
@@ -51,9 +70,4 @@ function Provider ({ children }) {
     )
 }
 
-function useAppContext () {
-    const context = useContext(AppContext)
-    return context
-}
-
-export { Provider, useAppContext }
+export { Provider, AppContext }

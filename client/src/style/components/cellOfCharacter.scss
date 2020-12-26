@@ -1,6 +1,11 @@
 .cell {
     width: 20%;
     height: 200px;
+    box-sizing: border-box;
+
+    &.active {
+        border: 8px solid #065306;
+    }
 
     .avatar {
         background-position: center;
