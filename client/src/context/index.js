@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
 import { FETCHING_DATA, SUCCESS_RECEIVED_DATA, FAILURE_RECEIVE_DATA,
-    UPDATE_X_INDEX, UPDATE_Y_INDEX } from '../constants'
+    UPDATE_INDEX } from '../constants'
 
 const AppContext = React.createContext()
 
@@ -8,8 +8,7 @@ const initialState = {
     isFetching: false,
     hasError: false,
     data: [],
-    xIndex: undefined,
-    yIndex: undefined
+    currentPos: undefined
 }
 
 function reducer (state, action) {
@@ -27,8 +26,7 @@ function reducer (state, action) {
                 ...state,
                 data: action.data,
                 isFetching: false,
-                xIndex: 0,
-                yIndex: 0
+                currentPos: 1
             }
         }
 
@@ -40,17 +38,10 @@ function reducer (state, action) {
             }
         }
 
-        case UPDATE_X_INDEX: {
+        case UPDATE_INDEX: {
             return {
                 ...state,
-                xIndex: action.index
-            }
-        }
-
-        case UPDATE_Y_INDEX: {
-            return {
-                ...state,
-                yIndex: action.index
+                currentPos: action.index
             }
         }
         
