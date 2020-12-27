@@ -1,5 +1,13 @@
+@import './shared/wrapper.scss';
+@import './shared/reset.scss';
+
+@import './pages/home.scss';
+@import './pages/scene.scss';
+
 @import './components/cellOfCharacter.scss';
 @import './components/tableOfCharacters.scss';
+@import './components/currentCharacter.scss';
+@import './components/playground.scss';
 
 body {
     font-family: 'VT323', monospace;

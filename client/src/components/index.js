@@ -1,3 +1,5 @@
 export { default as TableOfCharacters } from './TableOfCharacters'
 export { default as CurrentCharacter } from './CurrentCharacter'
 export { default as CellOfCharacter } from './CellOfCharacter'
+export { default as Playground } from './Playground'
+export { default as ControlBar } from './ControlBar'

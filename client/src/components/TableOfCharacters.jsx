@@ -1,20 +1,26 @@
 import React from 'react'
+import { useHistory } from "react-router-dom"
 import CellOfCharacter from './CellOfCharacter'
 import { useEventListener, useAppContext } from '../hooks'
 import { updateIndex } from '../actions'
 
 export default function TableOfCharacters () {
+    const history = useHistory();
     const [ state, dispatch ] = useAppContext()
     const { data, currentPos } = state
 
     const SIZE_ROW = 5
     
     const handleKeyDown = (event) => {
-        const arrowKeys = [37, 38, 39, 40]
+        const arrowKeys = [13, 37, 38, 39, 40]
         const { keyCode } = event
         
         if (arrowKeys.includes(keyCode)) {   
             switch(keyCode) {
+                case 13: {
+                    return startFight()
+                }
+                
                 case 37: {
                     return moveTo(-1)
                 }
@@ -52,6 +58,14 @@ export default function TableOfCharacters () {
         }
 
         dispatch(updateIndex(newPos))
+    }
+
+    const startFight = () => {
+        if (!currentPos) {
+            return false
+        }
+
+        history.push('/scene')
     }
     
     useEventListener('keydown', handleKeyDown)

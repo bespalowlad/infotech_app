@@ -1,0 +1,13 @@
+.playground {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .player {
+        width: 350px;
+        
+        img {
+            width: 100%;
+        }
+    }
+}
