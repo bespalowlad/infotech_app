@@ -1,0 +1,23 @@
+.swipe-enter,
+.swipe-appear {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.5);
+}
+
+.swipe-enter-active,
+.swipe-appear-active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    transition: .3s cubic-bezier(0, 1, 0.5, 1);
+}
+
+.swipe-exit {
+    opacity: 1;
+    transform: translateX(0) scale(0.5);
+}
+
+.swipe-exit-active {
+    opacity: 0;
+    transform: translateX(100%) scale(1);
+    transition: .3s cubic-bezier(0, 1, 0.5, 1);
+}

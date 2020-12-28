@@ -1,0 +1,34 @@
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 5px;
+    position: relative;
+
+    &.active {
+        &:after {
+            transform: scale(1.4);
+            opacity: .2;
+        }
+    }
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 5px;
+        background-color: white;
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    & + .control {
+        margin-left: 10px;
+    }
+}

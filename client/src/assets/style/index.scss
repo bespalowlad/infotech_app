@@ -2,6 +2,7 @@
 @import './shared/mixins.scss';
 @import './shared/wrapper.scss';
 @import './shared/reset.scss';
+@import './shared/transitions.scss';
 
 @import './pages/home.scss';
 @import './pages/scene.scss';
@@ -11,6 +12,7 @@
 @import './components/currentCharacter.scss';
 @import './components/playground.scss';
 @import './components/controlBar.scss';
+@import './components/control.scss';
 
 body {
     font-family: 'VT323', monospace;

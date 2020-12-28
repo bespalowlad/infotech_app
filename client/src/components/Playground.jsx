@@ -10,12 +10,12 @@ export default function Playground () {
     return (
         <div className="playground">
             <div 
-                className="player" 
+                className="player active" 
                 style={{ backgroundImage: `url(${currentCharacter.full_img})` }}
                 role="img"
             ></div>
             <div 
-                className="player" 
+                className="player active" 
                 style={{ backgroundImage: `url(${randomCharacter.full_img})` }}
                 role="img"
             ></div>
