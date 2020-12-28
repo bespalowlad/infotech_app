@@ -3,6 +3,7 @@ import { TableOfCharacters, CurrentCharacter } from '../components'
 import { getCharacters } from '../api'
 import { useAppContext } from '../hooks'
 import { fetchingData, successReceivedData, failureReceiveData } from '../actions'
+import gif from '../assets/images/gif.gif'
 
 export default function Home () {
     const [ state, dispatch ] = useAppContext()
@@ -24,11 +25,19 @@ export default function Home () {
     return (
         <div className="home-page">
             <div className="wrapper">
-                <h1>Select your fighter</h1>
-                <div className="content-wrapper">
-                    <CurrentCharacter />
-                    <TableOfCharacters />
-                </div>
+                {state.hasError ? 
+                    (<>
+                        <h1>Something went wrong, please try again</h1>
+                        <img className="gif" src={ gif } alt="Gif"/>
+                    </>) :
+                    (<>
+                        <h1>Select your fighter</h1>
+                        <div className="content-wrapper">
+                            <CurrentCharacter />
+                            <TableOfCharacters />
+                        </div>
+                    </>)
+                }
             </div>
         </div>
     )
