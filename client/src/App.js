@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import { RouteGuard } from './common'
 import { Home, Scene, NotFound } from './pages'
 import { Provider } from './context'
-import './style/index.scss'
+import './assets/style/index.scss'
 
 function App() {
   return (

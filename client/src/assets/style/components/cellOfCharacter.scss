@@ -1,6 +1,6 @@
 .cell {
-    width: 20%;
-    height: 200px;
+    width: 18%;
+    height: 150px;
     box-sizing: border-box;
 
     &.active {
@@ -8,9 +8,7 @@
     }
 
     .avatar {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend %bg-cover;
         width: 100%;
         height: 100%;
     }

@@ -10,7 +10,11 @@ export default function CurrentCharacter () {
         <div className="current-character">
             { currentPos && (
                 <>
-                    <img src={ currentCharacter.full_img } alt={ currentCharacter.name } />
+                    <div 
+                        className="current-character-img" 
+                        style={{ backgroundImage: `url(${currentCharacter.full_img})` }}
+                        role="img"
+                    ></div>
                     <h3>{ currentCharacter.name }</h3>
                 </>
             )}

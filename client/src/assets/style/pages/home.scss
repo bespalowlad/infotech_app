@@ -1,0 +1,16 @@
+.home-page {
+    background-image: url('../../images/bg_screen_1.jpg');
+    @extend %bg-cover;
+    
+    h1 {
+        text-align: center;
+        margin-bottom: 50px;
+        color: $gray;
+    }
+
+    .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}

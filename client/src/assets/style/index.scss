@@ -1,3 +1,5 @@
+@import './shared/variable.scss';
+@import './shared/mixins.scss';
 @import './shared/wrapper.scss';
 @import './shared/reset.scss';
 
@@ -8,6 +10,7 @@
 @import './components/tableOfCharacters.scss';
 @import './components/currentCharacter.scss';
 @import './components/playground.scss';
+@import './components/controlBar.scss';
 
 body {
     font-family: 'VT323', monospace;

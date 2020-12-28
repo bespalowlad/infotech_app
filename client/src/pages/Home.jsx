@@ -23,10 +23,12 @@ export default function Home () {
     
     return (
         <div className="home-page">
-            <h1>Select your fighter</h1>
             <div className="wrapper">
-                <CurrentCharacter />
-                <TableOfCharacters />
+                <h1>Select your fighter</h1>
+                <div className="content-wrapper">
+                    <CurrentCharacter />
+                    <TableOfCharacters />
+                </div>
             </div>
         </div>
     )

@@ -1,0 +1,10 @@
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: calc(100% - 60px);
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

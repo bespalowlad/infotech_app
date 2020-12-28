@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function ControlBar () {
     return (
-        <div>ControlBar</div>
+        <div className="control-bar">ControlBar</div>
     )
 }
