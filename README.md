@@ -9,3 +9,27 @@
 > :warning: на вторую страницу возможен переход только в том случае, если выбран герой
 
 ![alt text](https://github.com/bespalowlad/infotech_app/blob/main/screenshots/Screenshot.png)
+
+# Стек
+###### Client
+- React (Create-React-App)
+- Context
+- Axios
+- Classnames
+
+###### Server
+- Express
+- Mongoose
+- Config.js
+- Cors
+
+# Быстрый страт
+```
+$ git clone https://github.com/bespalowlad/infotech_app
+$ cd server
+$ yarn install
+$ yarn run server
+$ cd client
+$ yarn install
+$ yarn run start
+```
