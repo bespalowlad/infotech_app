@@ -53,8 +53,8 @@ export default function TableOfCharacters () {
                 (currentPos + step === 0 ? data.length : currentPos - 1)
         } else if (Math.abs(step) === SIZE_ROW) {
             newPos = step > 0 ?
-                (currentPos + step <= data.length ? currentPos + step : (currentPos + step) % SIZE_ROW) :
-                (currentPos + step <= 0 ? (data.length - currentPos) % data.length : currentPos + step)
+                (currentPos + step <= data.length ? currentPos + step : currentPos) :
+                (currentPos + step <= 0 ? currentPos : currentPos + step)
         }
 
         dispatch(updateIndex(newPos))
