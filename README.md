@@ -8,4 +8,4 @@
 
 > :warning: на вторую страницу возможен переход только в том случае, если выбран герой
 
-![alt text](https://github.com/bespalowlad/infotech_app/blob/master/sreenshots/Screenshot.png)
+![alt text](https://github.com/bespalowlad/infotech_app/blob/main/screenshots/Screenshot.png)
