@@ -29,23 +29,22 @@ export default function Home () {
     return (
         <div className="home-page">
             <div className="wrapper">
-                {isLoading && (
-                    <div className="spinner">
+                {isLoading ? 
+                    (<div className="spinner">
                         <FontAwesomeIcon icon={ faSpinner } color="white" size="4x" spin />
-                    </div>
-                )}
-                {state.hasError ? 
-                    (<>
-                        <h1>Something went wrong, please try again</h1>
-                        <img className="gif" src={ gif } alt="Gif"/>
-                    </>) :
-                    (<>
-                        <h1>Select your fighter</h1>
-                        <div className="content-wrapper">
-                            <CurrentCharacter />
-                            <TableOfCharacters />
-                        </div>
-                    </>)
+                    </div>) :
+                    state.hasError ? 
+                        (<>
+                            <h1>Something went wrong, please try again</h1>
+                            <img className="gif" src={ gif } alt="Gif"/>
+                        </>) :
+                        (<>
+                            <h1>Select your fighter</h1>
+                            <div className="content-wrapper">
+                                <CurrentCharacter />
+                                <TableOfCharacters />
+                            </div>
+                        </>)
                 }
             </div>
         </div>
